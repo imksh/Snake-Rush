@@ -43,8 +43,8 @@ const cols = canvas.height/box;
 
 let snake =[{x:box*5,y:box*5}];
 let food ={
-    x: Math.floor(Math.random() * cols) * box,
-    y: Math.floor(Math.random() * rows) * box,
+    x: Math.floor(Math.random() * (cols-2)+1) * box,
+    y: Math.floor(Math.random() * (rows-2)+1) * box,
 };
 
 //Checking button press
@@ -199,8 +199,8 @@ function game()
     {
         score=score+5;
         food ={
-            x: Math.floor(Math.random() * cols) * box,
-            y: Math.floor(Math.random() * rows) * box,
+            x: Math.floor(Math.random() * (cols-2)+1) * box,
+            y: Math.floor(Math.random() * (rows-2)+1) * box,
         };
     }
     else
@@ -242,8 +242,8 @@ function restart()
     score=0;
     snake =[{x:box*5,y:box*5}]; 
     food ={
-        x: Math.floor(Math.random()*rows)*box,
-        y: Math.floor(Math.random()*cols)*box,
+        x: Math.floor(Math.random() * (cols-2)+1) * box,
+        y: Math.floor(Math.random() * (rows-2)+1) * box,
     };
     dx=box;
     dy=0;
