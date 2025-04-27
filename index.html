@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Rush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Snake Rush</h1></header>
+    <div class="choose"  id="popup">
+        <button id="close" onclick="closebox()"> X</button>
+        <h3>Game Over!!!</h3>
+        <br>
+        <span>Your Score : <span id="endscore"></span></span>
+        <br>
+        <button onclick="restart()" id="restart" class="mainbtn  btns">Restart</button>
+            <button onclick="menu()" id="popupmenu" class="mainbtn  btns">Menu</button>
+    </div>
+    <div class="choose" id="choose">
+        <button id="close" onclick="closebox()"> X</button>
+        <h3>Choose Level : </h3>
+        <button class="btns" id="level1" onclick="closebox() , setLevel(200)">Level 1</button>
+        <button class="btns" id="level2" onclick="closebox(), setLevel(150)">Level 2</button>
+        <button class="btns" id="level3" onclick="closebox(), setLevel(100)">Level 3</button>
+        <button class="btns" id="level4" onclick="closebox(), setLevel(80)">Level 4</button>
+        <button class="btns" id="level5" onclick="closebox(), setLevel(50)">Level 5</button>
+    </div>
+    <main id="main">
+        <div class="options">
+            <button onclick="menu()" id="menu" class="mainbtn  btns">Menu</button>
+            <span id="score"></span>
+            <div class="mode">
+                <input type="checkbox" id="check" >
+                <label for="check" class="modebtn"></label>
+            </div>
+        </div>
+        <div class="container">
+            <div class="game">
+                <canvas id="canvas" ></canvas>
+            </div>
+            <div class="buttons">
+                <button class="gridbtn btns" id="pause">Pause</button>
+                <div class="gamebtn">
+                    <button id="up" class="btn btns">^</button>
+                    <button id="right" class="btn btns">></button>
+                    <button id="left" class="btn btns"><</button>
+                    <button id="down" class="btn btns">v</button>
+                </div>
+                <button onclick="restart()" id="restart" class="gridbtn btns">Restart</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
